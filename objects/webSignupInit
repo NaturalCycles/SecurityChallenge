@@ -1,0 +1,83 @@
+{
+  "backendResponse": {
+    "userLocale": {
+      "country": "SE",
+      "region": "AB",
+      "city": "Stockholm",
+      "zip": "17311",
+      "currency": "SE",
+      "pricingCountry": "SE",
+      "pricingCurrency": "SEK",
+      "supportedLanguage": "en",
+      "appPlatforms": [
+        ""
+      ],
+      "iap": {}
+    },
+    "product": {
+      "items": [
+        {
+          "key": "YEAR",
+          "type": "SUBSCRIPTION",
+          "price": "590[SEK]",
+          "recurring": true,
+          "duration": 12,
+          "skus": [],
+          "variants": [
+            "thermometer"
+          ]
+        },
+        {
+          "key": "MONTH",
+          "type": "SUBSCRIPTION",
+          "price": "95[SEK]",
+          "recurring": true,
+          "duration": 1,
+          "skus": [],
+          "variants": []
+        },
+        {
+          "key": "THERMOMETER",
+          "type": "SHOP",
+          "price": "199[SEK]",
+          "recurring": false,
+          "skus": [
+            {
+              "sku": "0071",
+              "variant": "celsius"
+            },
+            {
+              "sku": "0072",
+              "variant": "fahrenheit"
+            }
+          ],
+          "variants": [
+            "celsius",
+            "fahrenheit"
+          ]
+        },
+        {
+          "key": "TRIAL",
+          "type": "SUBSCRIPTION",
+          "price": "0[SEK]",
+          "recurring": false,
+          "duration": 1,
+          "skus": [],
+          "variants": []
+        }
+      ]
+    },
+    "experiment": {
+      "id": "z65drn8jofcygd0g",
+      "assignments": {
+        "AB012": null,
+        "AB014": null,
+        "AB015": null,
+        "AB016": null,
+        "AB017": "control",
+        "AB018": "control",
+        "AB019": "test"
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Natural Cycles Security Training - Securing user data in the frontend</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <h2>Cross Origin Resource Sharing (CORS)</h2>
+      <h3>Stealing user data with CORS</h3>
+      <h4>Scenario</h4>
+      <p>Somebody wants access to Natural Cycles customer data, this Scenario
+        hightlights how an attacker could get their hands on user data if care is not taken to authentication
+        mechanisms and CORS settings.
+      </p>
+      <p>
+        The attack requires the user to be logged in to Natural Cycles App in
+        one tab and then visit a malicious or compromised 3'rd party website.
+      </p>
+      <h4>Requirements</h4>
+      <ul>
+        <li>Browser (chrome recommended) allows "third party cookies", can be disabled in settings or plugins. <a href="https://www.whatismybrowser.com/detect/are-third-party-cookies-enabled" target="_blank"> Test here.</a></li>
+        <li>Add to /etc/hosts: <cite>127.0.0.1       www.nc.com www.evil.com</cite></li>
+      </ul>
+      <h4>Attack scenarios</h4>
+      <ul>
+        <li><a href="https://www.nc.com:3000/cors/allow-origin/index">Theft successful - Set allow to Origin</a></li>
+      </ul>
+    </div>
+    <div class="container-fluid">
+      <h2>Local Storage theft</h2>
+      <h3>Logging in as other users via theft of local storage</h3>
+      <ul>
+        <li><a href="local-storage/index">Theft succeeded</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

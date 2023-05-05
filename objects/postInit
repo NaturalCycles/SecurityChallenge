@@ -1,0 +1,112 @@
+{
+  "backendResponse": {
+    "messages": [
+      {
+        "id": "msg-welcome-video_1534771655",
+        "created": 1534771655,
+        "read": 1534771656,
+        "msgKey": "msg-welcome-video",
+        "msg": "# Well done Jane! Now let's learn the basics. \n\nOur \"Get Started\" video will provide you with all the information you need to start your Natural Cycles journey.",
+        "popup": true,
+        "store": true,
+        "deleted": false
+      },
+      {
+        "id": "msg-guide-measure_1535122411",
+        "created": 1535122411,
+        "read": 1535122618,
+        "msgKey": "msg-guide-measure",
+        "msg": "# Tips on measuring your temperature\n\nHave a look at the measuring guide and learn all the tips and tricks to getting great data. You'll learn when to measure when you snooze, how to place the thermometer in your mouth and what a \"deviating temperature\" is!\n\n[Read the guide](#/goto?modal=GUIDE&guide=MEASURE&source=Message)",
+        "popup": false,
+        "store": true,
+        "deleted": false
+      },
+      {
+        "id": "msg-FTwinback7addData_1535349516",
+        "created": 1535349516,
+        "msgKey": "msg-FTwinback7addData",
+        "msg": "# More than a week already!\n\nJane, you'll soon be halfway through your Free Trial. Yay! We just wanted to remind you that you can always contact our support if you have any questions and upgrade to one of our subscriptions at any time.\n\n[See subscriptions](#/home/settings-changeplan)",
+        "popup": false,
+        "store": true,
+        "deleted": false
+      },
+      {
+        "id": "msg-addDataTips_1535349569",
+        "created": 1535349569,
+        "msgKey": "msg-addDataTips",
+        "msg": "# Tips on adding data \n\n1. Take your temperature as soon as you wake up, before snoozing and getting up and out of bed.\n2. Press the thermometer's button after you've placed it under your tongue and your mouth is closed.\n3. Tap “Deviating temp.” if you're sick, slept more/ less than usual or have been drinking alcohol and feel hungover.\n4. If you have your period, remember to add it everyday you have it. \n\n [Learn more](https://help.naturalcycles.com/hc/en-us/articles/360003290614-When-and-how-to-measure?utm_source=InAppMessages&utm_medium=email&utm_campaign=msg-addDataTips_en)",
+        "popup": false,
+        "store": true,
+        "deleted": false
+      },
+      {
+        "id": "msg-thermLoadingPb_1535350216",
+        "created": 1535350216,
+        "read": 1535350219,
+        "msgKey": "msg-thermLoadingPb",
+        "msg": "# Did your thermometer beep?\n \n You just added a temperature value of 37.0. This is also the thermometer's default value, so we just wanted to make sure that you waited for the beep before checking the reading on your thermometer. If you didn't hear a beep go ahead and press \"Clear Data\" -> \"Skip today\" and be sure to wait for the beep tomorrow 😉\n \n [Tips on measuring](https://help.naturalcycles.com/hc/en-us/articles/360003290614-When-and-how-to-measure?utm_source=InAppMessages&utm_medium=email&utm_campaign=msg-thermLoadingPb_en)",
+        "popup": true,
+        "store": true,
+        "deleted": false
+      },
+      {
+        "id": "msg-noMeasurement-yesterday_1535350286",
+        "created": 1535350286,
+        "msgKey": "msg-noMeasurement-yesterday",
+        "msg": "# No data yesterday \n\n  Oops! You forgot to add data yesterday. If you did measure your temperature, you can add it now in retrospect. Remember to measure your temperature tomorrow morning, before you get out of bed.",
+        "popup": false,
+        "store": true,
+        "deleted": false
+      },
+      {
+        "id": "msg-unhealthyHabits-plan_1535123249",
+        "created": 1535123249,
+        "read": 1535124484,
+        "msgKey": "msg-unhealthyHabits-plan",
+        "msg": "# Habits to drop\n\nWe wanted to gently let you know that habits such as smoking and drinking can impact your ability to conceive and are associated with significant risks for babies. This is why we recommend dropping these habits before and during a pregnancy.",
+        "popup": false,
+        "store": true,
+        "deleted": false
+      },
+      {
+        "id": "msg-partnerHabits-plan_1535124761",
+        "created": 1535124761,
+        "msgKey": "msg-partnerHabits-plan",
+        "msg": "# Men and fertility\n\nMaking a baby takes teamwork, right? Besides the right timing, your partner getting rid of some habits might also increase your chances of getting pregnant.\nFor example, did you know that consuming alcohol, drugs such as marijuana or cocaine, and smoking can reduce the number and quality of sperm?",
+        "popup": false,
+        "store": true,
+        "deleted": false
+      },
+      {
+        "id": "msg-calibrateTherm_1535122601",
+        "created": 1535122601,
+        "read": 1535122618,
+        "msgKey": "msg-calibrateTherm",
+        "msg": "# Calibrate your thermometer \n\n Did you know that you can calibrate your thermometer? This is useful to double check both that your thermometer works as it should and that you are measuring correctly. You'll find the calibrate function in your profile. \n\n [Go to my profile](#/home/profile/me)",
+        "popup": false,
+        "store": true,
+        "deleted": false
+      },
+      {
+        "id": "msg-medication-plan_1535126744",
+        "created": 1535126744,
+        "msgKey": "msg-medication-plan",
+        "msg": "# Medication and Planning a pregnancy\n\nWhen trying for a baby, it is important to:\n - always check with your doctor before taking any prescribed or over-the-counter medicine 💊\n - make sure your doctor, dentist or other healthcare professional knows you’re trying to get pregnant before they prescribe anything or give you treatment\n - talk to your doctor if you take regular medication.",
+        "popup": false,
+        "store": true,
+        "deleted": false
+      }
+    ],
+    "unreadMessages": 5,
+    "achievements": {
+      "created": 1534771655,
+      "updated": 1535349569,
+      "achieved": "firstTemperatureMeasurement,lhRecommendation,sexPlan,signupAndInstallTheApp",
+      "progress": {
+        "twentyInAMonth": 2,
+        "fiveInAWeek": 1
+      }
+    },
+    "subscriptions": null
+  }
+}
