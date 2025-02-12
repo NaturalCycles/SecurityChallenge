@@ -11,6 +11,7 @@ let allowOrigin = '*' // origin|*|null
 var router = express.Router()
 
 app.set('view engine', 'ejs')
+app.set('trust proxy', true)
 app.use(cookieParser())
 
 //Hack static for default CORS (no custom headers) including allowing POST
@@ -107,6 +108,7 @@ app.get('/login', function (req, res) {
 })
 
 app.get('/', function (req, res) {
+  console.log("Audit log: Received request from: " + req.ip)
   res.render('index')
 })
 
