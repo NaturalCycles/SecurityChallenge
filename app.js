@@ -25,7 +25,7 @@ function blockIfNoCookie(req, res) {
   console.log(req.hostname + ":" + JSON.stringify(req.cookies))
   if (req.path.startsWith("/json-") && req.cookies.superSecretSession == null) {
     console.log("Blocking request");
-    res.send(400, 'missing authorization header');
+    res.status(400).send('missing authorization header');
     return true;
   } else {
     return false;
