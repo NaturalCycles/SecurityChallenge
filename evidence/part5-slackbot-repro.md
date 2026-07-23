@@ -66,6 +66,9 @@ operational gotcha.
 
 ## Screenshots
 
-The Slack channel itself is the live artifact (the reviewer inspects final state directly).
-If static screenshots are wanted in the zip, drop them in `evidence/slack-screenshots/`:
-the interactive alert (with the three buttons) and the resolved/discreet state after classification.
+`slack-screenshots/slackbot-resolved-alerts.png` — the `#candidate-purushotham` channel showing
+three bot-posted security alerts, each auto-triggered by a real credentialed cross-origin request
+and each classified into the discreet resolved state
+(`✅ Confirmed cyber attack · marked by @Purushotham Muktha at <time>`, buttons removed). This is
+the visual counterpart to the persisted SQLite rows above. See
+`slack-screenshots/README.md` for the caption.
