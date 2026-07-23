@@ -3,6 +3,8 @@
 Author: Purushotham Muktha
 Target: `cors-demo` vulnerable webapp (this repo), run locally per `README.md`
 Evidence referenced below lives in `evidence/`.
+Architecture diagrams, key takeaways, the security-automation roadmap, and the tech stack are in
+**`ARCHITECTURE.md`**.
 
 ---
 
