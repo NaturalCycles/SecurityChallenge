@@ -6,6 +6,19 @@ var cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 let allowOrigin = '*' // origin|*|null
 
+// Fire-and-forget notification to the Slack security-response bot (see slackbot/).
+// Bot isn't required for the app to run - if it's not up, this just logs and continues.
+const SLACKBOT_ALERT_URL = process.env.SLACKBOT_ALERT_URL || 'http://127.0.0.1:3001/internal/alert';
+function notifySecurityAlert(payload) {
+  fetch(SLACKBOT_ALERT_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  }).catch((err) => {
+    console.log('Could not reach slackbot alert endpoint (is it running?): ' + err.message);
+  });
+}
+
 
 
 var router = express.Router()
@@ -76,9 +89,10 @@ app.use(function (req, res, next) {
     res.setHeader('X-Download-Options', 'noopen');
     res.setHeader('X-XSS-Protection', '1; mode=block');
   } else if (req.path.startsWith("/json-cors-origin/")) {
+    const origin = req.get("Origin");
 
-    if (req.get("Origin") != null) {
-      res.setHeader('Access-Control-Allow-Origin', req.get("Origin"));
+    if (origin != null) {
+      res.setHeader('Access-Control-Allow-Origin', origin);
     } else {
       res.setHeader('Access-Control-Allow-Origin', "https://" + req.hostname + ":3000");
     }
@@ -89,6 +103,20 @@ app.use(function (req, res, next) {
     res.setHeader('X-DNS-Prefetch-Control', 'off');
     res.setHeader('X-Download-Options', 'noopen');
     res.setHeader('X-XSS-Protection', '1; mode=block');
+
+    // Security detection hook (Part 5): a credentialed cross-origin request against this
+    // route is exactly the signature of the Part 1 CORS-theft attack - flag it live.
+    const ownOrigins = ["https://" + req.hostname + ":3000", "https://www.nc.com:3000", "https://localhost:3000"];
+    if (origin != null && !ownOrigins.includes(origin) && req.cookies.superSecretSession != null) {
+      console.log("SECURITY ALERT: possible CORS data theft in progress from origin " + origin);
+      notifySecurityAlert({
+        type: 'cyber_attack_suspected',
+        origin,
+        ip: req.ip,
+        path: req.path,
+        userAgent: req.get('User-Agent'),
+      });
+    }
   }
 
   if (blockIfNoCookie(req, res)) {
